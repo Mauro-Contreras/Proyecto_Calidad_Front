@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Login.css";
+import "./login.css";
 
 export default function Login() {
   const [isRegister, setIsRegister] = useState(false);
@@ -12,20 +12,20 @@ export default function Login() {
   const toggleMode = () => setIsRegister(!isRegister);
 
   const handleLogin = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // 🔹 Datos simulados por ahora
-    const adminUser = { email: "admin@dreamcars.com", password: "admin123" };
-    const clientUser = { email: "cliente@dreamcars.com", password: "cliente123" };
+  // 🔹 Datos simulados por ahora
+  const adminUser = { email: "admin@dreamcars.com", password: "admin123" };
+  const clientUser = { email: "cliente@dreamcars.com", password: "cliente123" };
 
-    if (email === adminUser.email && password === adminUser.password) {
-      navigate("/admin"); // 👈 Va al dashboard
-    } else if (email === clientUser.email && password === clientUser.password) {
-      navigate("/"); // 👈 Va al home del cliente
-    } else {
-      alert("Correo o contraseña incorrectos");
-    }
-  };
+  if (email === adminUser.email && password === adminUser.password) {
+    navigate("/admin"); // 👈 Va al dashboard (index.jsx)
+  } else if (email === clientUser.email && password === clientUser.password) {
+    navigate("/"); // 👈 Va al Home del cliente
+  } else {
+    alert("Correo o contraseña incorrectos");
+  }
+};
 
   return (
     <div
