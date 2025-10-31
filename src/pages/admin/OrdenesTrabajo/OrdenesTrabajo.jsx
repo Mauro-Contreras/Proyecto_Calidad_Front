@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../admin/styles.css";
-import "../admin/panel.css";
+import "../style.css";
+import "../panel.css";
 
 const OrdenesTrabajo = () => {
   useEffect(() => {
