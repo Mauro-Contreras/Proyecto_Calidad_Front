@@ -5,9 +5,11 @@ import "../style.css";
 import "../panel.css";
 
 const Index = () => {
-  useEffect(() => {
-    // Chart de Área (Resumen Diario)
-    const ctxArea = document.getElementById("myAreaChart");
+useEffect(() => {
+  const ctxArea = document.getElementById("myAreaChart");
+  const ctxBar = document.getElementById("myBarChart");
+
+  if (ctxArea) {
     new Chart(ctxArea, {
       type: "line",
       data: {
@@ -23,14 +25,11 @@ const Index = () => {
           },
         ],
       },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-      },
+      options: { responsive: true, plugins: { legend: { display: false } } },
     });
+  }
 
-    // Chart de Barras (Resumen Mensual)
-    const ctxBar = document.getElementById("myBarChart");
+  if (ctxBar) {
     new Chart(ctxBar, {
       type: "bar",
       data: {
@@ -43,12 +42,11 @@ const Index = () => {
           },
         ],
       },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-      },
+      options: { responsive: true, plugins: { legend: { display: false } } },
     });
-  }, []);
+  }
+}, []);
+
 
   return (
     <div className="sb-nav-fixed">
