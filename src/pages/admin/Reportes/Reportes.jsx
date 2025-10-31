@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Chart, registerables } from "chart.js";
-import "../../admin/styles.css";
-import "../../admin/panel.css";
+import "../style.css";
+import "../panel.css";
 
 Chart.register(...registerables);
 
