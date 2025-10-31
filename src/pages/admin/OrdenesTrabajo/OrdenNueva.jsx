@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "../admin/styles.css";
-import "../admin/panel.css";
+import "../style.css";
+import "../panel.css";
 
 function OrdenNueva() {
   const navigate = useNavigate();
