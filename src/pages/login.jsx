@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css";
 
-export default function Login() {
+export default function Login({ setUserRole }) {
   const [isRegister, setIsRegister] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,20 +12,22 @@ export default function Login() {
   const toggleMode = () => setIsRegister(!isRegister);
 
   const handleLogin = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // 🔹 Datos simulados por ahora
-  const adminUser = { email: "admin@dreamcars.com", password: "admin123" };
-  const clientUser = { email: "cliente@dreamcars.com", password: "cliente123" };
+    // 🔹 Datos simulados por ahora
+    const adminUser = { email: "admin@dreamcars.com", password: "admin123" };
+    const clientUser = { email: "cliente@dreamcars.com", password: "cliente123" };
 
-  if (email === adminUser.email && password === adminUser.password) {
-    navigate("/admin"); // 👈 Va al dashboard (index.jsx)
-  } else if (email === clientUser.email && password === clientUser.password) {
-    navigate("/"); // 👈 Va al Home del cliente
-  } else {
-    alert("Correo o contraseña incorrectos");
-  }
-};
+    if (email === adminUser.email && password === adminUser.password) {
+      setUserRole("admin");
+      navigate("/admin"); // 👈 Va al dashboard (index.jsx)
+    } else if (email === clientUser.email && password === clientUser.password) {
+      setUserRole("cliente");
+      navigate("/cliente"); // 👈 Va al panel del cliente
+    } else {
+      alert("❌ Correo o contraseña incorrectos");
+    }
+  };
 
   return (
     <div
@@ -35,7 +37,9 @@ export default function Login() {
       } d-flex align-items-center justify-content-center`}
     >
       <div
-        className={`card-container ${isRegister ? "register-mode" : "login-mode"}`}
+        className={`card-container ${
+          isRegister ? "register-mode" : "login-mode"
+        }`}
       >
         {/* 🔙 Flecha */}
         <a href="/" className="back-arrow">
