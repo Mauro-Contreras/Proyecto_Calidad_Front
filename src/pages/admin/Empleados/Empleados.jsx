@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../admin/style.css";
-import "../../admin/panel.css";
+import "../style.css";
+import "../panel.css";
 
 function Empleados() {
   return (
