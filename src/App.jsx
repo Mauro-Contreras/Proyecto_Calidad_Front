@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Páginas principales (cliente y login)
@@ -23,21 +24,42 @@ import NuevoVehiculo from "./pages/admin/Vehiculos/NuevoVehiculo";
 import "./pages/admin/style.css";
 import "./pages/admin/panel.css";
 
+// Componente temporal del Cliente
+function ClienteDashboard() {
+  return (
+    <div style={{ padding: "40px", textAlign: "center" }}>
+      <h1>Bienvenido Cliente 👋</h1>
+      <p>Esta es la vista del cliente. Pronto estará conectada al backend.</p>
+    </div>
+  );
+}
+
 function App() {
-  const isAuthenticated = true; // cambia esto según tu lógica de login
+  // Estado global del usuario actual (rol)
+  const [userRole, setUserRole] = useState(null); // null | "admin" | "cliente"
 
   return (
     <BrowserRouter>
       <Routes>
-        {/* Parte pública */}
+        {/* Página pública */}
         <Route path="/" element={<Home />} />
+
+        {/* Página de login */}
         <Route
           path="/login"
-          element={isAuthenticated ? <Navigate to="/admin" /> : <Login />}
+          element={
+            userRole === "admin" ? (
+              <Navigate to="/admin" />
+            ) : userRole === "cliente" ? (
+              <Navigate to="/cliente" />
+            ) : (
+              <Login setUserRole={setUserRole} />
+            )
+          }
         />
 
-        {/* Panel de administrador */}
-        {isAuthenticated && (
+        {/* Panel de ADMIN */}
+        {userRole === "admin" && (
           <>
             <Route path="/admin" element={<Dashboard />} />
             <Route path="/admin/clientes" element={<Clientes />} />
@@ -54,6 +76,14 @@ function App() {
             <Route path="/admin/nuevo-vehiculo" element={<NuevoVehiculo />} />
           </>
         )}
+
+        {/* Panel de CLIENTE */}
+        {userRole === "cliente" && (
+          <Route path="/cliente" element={<ClienteDashboard />} />
+        )}
+
+        {/* Redirección por defecto */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
