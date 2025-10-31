@@ -7,40 +7,35 @@ import "../panel.css";
 const Index = () => {
 useEffect(() => {
   const ctxArea = document.getElementById("myAreaChart");
-  const ctxBar = document.getElementById("myBarChart");
-
   if (ctxArea) {
     new Chart(ctxArea, {
       type: "line",
       data: {
         labels: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
-        datasets: [
-          {
-            label: "Órdenes",
-            data: [12, 19, 3, 5, 2, 3, 7],
-            fill: true,
-            backgroundColor: "rgba(255, 193, 7, 0.2)",
-            borderColor: "#ffc107",
-            tension: 0.3,
-          },
-        ],
+        datasets: [{
+          label: "Órdenes",
+          data: [12, 19, 3, 5, 2, 3, 7],
+          fill: true,
+          backgroundColor: "rgba(255, 193, 7, 0.2)",
+          borderColor: "#ffc107",
+          tension: 0.3,
+        }],
       },
       options: { responsive: true, plugins: { legend: { display: false } } },
     });
   }
 
+  const ctxBar = document.getElementById("myBarChart");
   if (ctxBar) {
     new Chart(ctxBar, {
       type: "bar",
       data: {
         labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
-        datasets: [
-          {
-            label: "Servicios",
-            data: [10, 20, 15, 25, 30, 22],
-            backgroundColor: "#212529",
-          },
-        ],
+        datasets: [{
+          label: "Servicios",
+          data: [10, 20, 15, 25, 30, 22],
+          backgroundColor: "#212529",
+        }],
       },
       options: { responsive: true, plugins: { legend: { display: false } } },
     });
