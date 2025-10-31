@@ -1,8 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../css/styles.css";
-import "../css/panel.css";
+import "../style.css";
+import "../panel.css";
+
 
 const NuevoCliente = () => {
   return (
