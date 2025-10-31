@@ -1,0 +1,150 @@
+
+:root {
+  --color-principal: #000000;   
+  --color-secundario: #fdd835;  
+  --color-fondo: #ffffff;       
+  --color-texto: #222222;       
+  --color-card: #f9f9f9;        
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: var(--color-principal) !important;
+}
+
+.navbar-brand {
+  color: var(--color-secundario) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar .nav-link {
+  color: var(--color-fondo) !important;
+}
+
+.sb-sidenav {
+  background-color: var(--color-principal);
+}
+
+.sb-sidenav .nav-link {
+  color: var(--color-fondo);
+  font-weight: 500;
+}
+
+.sb-sidenav .nav-link:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.sb-sidenav .sb-sidenav-menu-heading {
+  color: var(--color-secundario);
+}
+
+.btn-primary,
+.btn-guardar,
+.btn-agregar {
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-guardar:hover,
+.btn-agregar:hover {
+  background-color: #fbc02d;
+  color: var(--color-principal);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-card);
+  color: var(--color-texto);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+.card {
+  background-color: var(--color-card);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3 {
+  color: var(--color-principal);
+}
+
+p {
+  color: #555;
+}
+
+input, select, textarea {
+  background-color: #fff;
+  color: var(--color-texto);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 5px var(--color-secundario);
+}
+
+label {
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-secundario);
+  border-radius: 5px;
+}
+
+h1.mt-4, h2 {
+  border-left: 6px solid var(--color-secundario);
+  padding-left: 10px;
+}
+
+a, .nav-link {
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.97);
+}
