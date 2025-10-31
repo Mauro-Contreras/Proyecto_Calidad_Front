@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../css/styles.css";
-import "../css/panel.css";
+import "../style.css";
+import "../panel.css";
 
 export default function Clientes() {
   const [clientes, setClientes] = useState([]);
