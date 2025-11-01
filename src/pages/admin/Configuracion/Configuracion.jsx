@@ -143,7 +143,7 @@ const Configuracion = () => {
                   Reportes
                 </a>
 
-                <a className="nav-link active" href="/configuracion">
+                <a className="nav-link active" href="/admin/configuracion">
                   <div className="sb-nav-link-icon"><i className="fas fa-cog"></i></div>
                   Configuración
                 </a>
