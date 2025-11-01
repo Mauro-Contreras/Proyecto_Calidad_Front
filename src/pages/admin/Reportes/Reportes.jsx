@@ -145,7 +145,7 @@ const Reportes = () => {
           <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <a className="nav-link" href="/index">
+                <a className="nav-link" href="/admin">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
@@ -169,10 +169,10 @@ const Reportes = () => {
                 </a>
                 <div className="collapse" id="collapseServicios" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/servicios">
+                    <a className="nav-link" href="admin/Servicios">
                       Lista de Servicios
                     </a>
-                    <a className="nav-link" href="/nuevo-servicio">
+                    <a className="nav-link" href="admin/NuevoServicio">
                       Agregar Servicio
                     </a>
                   </nav>
@@ -195,10 +195,10 @@ const Reportes = () => {
                 </a>
                 <div className="collapse" id="collapseOrdenes" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/ordenes-trabajo">
+                    <a className="nav-link" href="admin/OrdenesTrabajo">
                       Administrar Órdenes
                     </a>
-                    <a className="nav-link" href="/orden-nueva">
+                    <a className="nav-link" href="admin/OrdenNueva">
                       Nueva Orden
                     </a>
                   </nav>
@@ -221,16 +221,16 @@ const Reportes = () => {
                 </a>
                 <div className="collapse" id="collapseClientes" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/clientes">
+                    <a className="nav-link" href="admin/Clientes">
                       Lista de Clientes
                     </a>
-                    <a className="nav-link" href="/nuevo-cliente">
+                    <a className="nav-link" href="admin/NuevoCliente">
                       Agregar Cliente
                     </a>
-                    <a className="nav-link" href="/vehiculos">
+                    <a className="nav-link" href="admin/Vehiculos">
                       Vehículos
                     </a>
-                    <a className="nav-link" href="/nuevo-vehiculo">
+                    <a className="nav-link" href="admin/NuevoVehiculo">
                       Agregar Vehículo
                     </a>
                   </nav>
@@ -253,17 +253,17 @@ const Reportes = () => {
                 </a>
                 <div className="collapse" id="collapseEmpleados" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/empleados">
+                    <a className="nav-link" href="admin/Empleados">
                       Lista de Empleados
                     </a>
-                    <a className="nav-link" href="/nuevo-empleado">
+                    <a className="nav-link" href="admin/NuevoEmpleado">
                       Agregar Empleado
                     </a>
                   </nav>
                 </div>
 
                 {/* REPORTES */}
-                <a className="nav-link active" href="/reportes">
+                <a className="nav-link active" href="admin/Reportes">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-chart-line"></i>
                   </div>
@@ -271,7 +271,7 @@ const Reportes = () => {
                 </a>
 
                 {/* CONFIGURACIÓN */}
-                <a className="nav-link" href="/configuracion">
+                <a className="nav-link" href="/Configuracion">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-cog"></i>
                   </div>
