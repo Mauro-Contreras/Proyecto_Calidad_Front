@@ -83,7 +83,7 @@ const NuevoEmpleado = () => {
             <div className="sb-sidenav-menu">
               <div className="nav">
                 {/* DASHBOARD */}
-                <a className="nav-link" href="/admin/index">
+                <a className="nav-link" href="/admin">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
