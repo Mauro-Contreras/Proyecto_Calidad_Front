@@ -197,6 +197,38 @@ function OrdenNueva() {
                   </nav>
                 </div>
 
+                {/* EMPLEADOS */}
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEmpleados"
+                  aria-expanded="false"
+                  aria-controls="collapseEmpleados"
+                >
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-user-cog"></i>
+                  </div>
+                  Empleados
+                  <div className="sb-sidenav-collapse-arrow">
+                    <i className="fas fa-angle-down"></i>
+                  </div>
+                </a>
+                <div
+                  className="collapse"
+                  id="collapseEmpleados"
+                  data-bs-parent="#sidenavAccordion"
+                >
+                  <nav className="sb-sidenav-menu-nested nav">
+                    <a className="nav-link" href="/admin/empleados">
+                      Lista de Empleados
+                    </a>
+                    <a className="nav-link" href="/admin/nuevo-empleado">
+                      Agregar Empleado
+                    </a>
+                  </nav>
+                </div>
+
                 <Link className="nav-link" to="/admin/reportes">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-chart-line"></i>
