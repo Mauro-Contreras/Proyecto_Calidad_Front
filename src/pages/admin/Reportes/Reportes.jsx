@@ -263,7 +263,7 @@ const Reportes = () => {
                 </div>
 
                 {/* REPORTES */}
-                <a className="nav-link active" href="/reportes">
+                <a className="nav-link active" href="/admin/reportes">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-chart-line"></i>
                   </div>
