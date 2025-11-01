@@ -83,7 +83,7 @@ const NuevoEmpleado = () => {
             <div className="sb-sidenav-menu">
               <div className="nav">
                 {/* DASHBOARD */}
-                <a className="nav-link" href="/index">
+                <a className="nav-link" href="/admin/index">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
@@ -111,10 +111,10 @@ const NuevoEmpleado = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/servicios">
+                    <a className="nav-link" href="/admin/servicios">
                       Lista de Servicios
                     </a>
-                    <a className="nav-link" href="/nuevo-servicio">
+                    <a className="nav-link" href="/admin/nuevo-servicio">
                       Agregar Servicio
                     </a>
                   </nav>
@@ -141,10 +141,10 @@ const NuevoEmpleado = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/ordenes-trabajo">
+                    <a className="nav-link" href="/admin/ordenes-trabajo">
                       Administrar Órdenes
                     </a>
-                    <a className="nav-link" href="/orden-nueva">
+                    <a className="nav-link" href="/admin/orden-nueva">
                       Nueva Orden
                     </a>
                   </nav>
@@ -171,13 +171,13 @@ const NuevoEmpleado = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/clientes">
+                    <a className="nav-link" href="/admin/clientes">
                       Lista de Clientes
                     </a>
-                    <a className="nav-link" href="/nuevo-cliente">
+                    <a className="nav-link" href="/admin/nuevo-cliente">
                       Agregar Cliente
                     </a>
-                    <a className="nav-link" href="/vehiculos">
+                    <a className="nav-link" href="/admin/vehiculos">
                       Vehículos
                     </a>
                     <a className="nav-link" href="/nuevo-vehiculo">
@@ -207,17 +207,17 @@ const NuevoEmpleado = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/empleados">
+                    <a className="nav-link" href="/admin/empleados">
                       Lista de Empleados
                     </a>
-                    <a className="nav-link active" href="/nuevo-empleado">
+                    <a className="nav-link active" href="/admin/nuevo-empleado">
                       Agregar Empleado
                     </a>
                   </nav>
                 </div>
 
                 {/* REPORTES */}
-                <a className="nav-link" href="/reportes">
+                <a className="nav-link" href="/admin/reportes">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-chart-line"></i>
                   </div>
@@ -225,7 +225,7 @@ const NuevoEmpleado = () => {
                 </a>
 
                 {/* CONFIGURACIÓN */}
-                <a className="nav-link" href="/configuracion">
+                <a className="nav-link" href="/admin/configuracion">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-cog"></i>
                   </div>
