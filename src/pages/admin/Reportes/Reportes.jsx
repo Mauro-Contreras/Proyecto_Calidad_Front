@@ -7,9 +7,19 @@ Chart.register(...registerables);
 
 const Reportes = () => {
   useEffect(() => {
-    // Gráfico de barras
-    const ctx1 = document.getElementById("graficoServiciosMes");
-    new Chart(ctx1, {
+  let chartServiciosMes = null;
+  let chartTiposServicios = null;
+
+  const ctx1 = document.getElementById("graficoServiciosMes");
+  const ctx2 = document.getElementById("graficoTiposServicios");
+
+  // 🔹 Gráfico de barras
+  if (ctx1) {
+    if (Chart.getChart(ctx1)) {
+      Chart.getChart(ctx1).destroy();
+    }
+
+    chartServiciosMes = new Chart(ctx1, {
       type: "bar",
       data: {
         labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
@@ -21,11 +31,20 @@ const Reportes = () => {
           },
         ],
       },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+      },
     });
+  }
 
-    // Gráfico circular
-    const ctx2 = document.getElementById("graficoTiposServicios");
-    new Chart(ctx2, {
+  // 🔹 Gráfico circular
+  if (ctx2) {
+    if (Chart.getChart(ctx2)) {
+      Chart.getChart(ctx2).destroy();
+    }
+
+    chartTiposServicios = new Chart(ctx2, {
       type: "pie",
       data: {
         labels: ["Mecánica", "Eléctrica", "Limpieza", "Otros"],
@@ -36,8 +55,20 @@ const Reportes = () => {
           },
         ],
       },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "bottom" } },
+      },
     });
-  }, []);
+  }
+
+  // 🔹 Limpiar los gráficos al desmontar el componente
+  return () => {
+    if (chartServiciosMes) chartServiciosMes.destroy();
+    if (chartTiposServicios) chartTiposServicios.destroy();
+  };
+}, []);
+
 
   return (
     <div className="sb-nav-fixed">
