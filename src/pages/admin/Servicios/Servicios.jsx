@@ -7,7 +7,7 @@ const Servicios = () => {
     <div className="sb-nav-fixed">
       {/* NAVBAR SUPERIOR */}
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand ps-3" href="/admin/inicio">
+        <a className="navbar-brand ps-3" href="/admin">
           DREAM CARS
         </a>
         <button
@@ -66,7 +66,7 @@ const Servicios = () => {
           >
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <a className="nav-link" href="/admin/inicio">
+                <a className="nav-link" href="/admin">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
