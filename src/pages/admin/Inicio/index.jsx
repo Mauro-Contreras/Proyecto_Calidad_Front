@@ -6,41 +6,74 @@ import "../panel.css";
 
 const Index = () => {
 useEffect(() => {
+  let chartAreaInstance = null;
+  let chartBarInstance = null;
+
   const ctxArea = document.getElementById("myAreaChart");
+  const ctxBar = document.getElementById("myBarChart");
+
+  // Crear gráfico de área
   if (ctxArea) {
-    new Chart(ctxArea, {
+    // Si ya existe, destruir antes de crear
+    if (Chart.getChart(ctxArea)) {
+      Chart.getChart(ctxArea).destroy();
+    }
+
+    chartAreaInstance = new Chart(ctxArea, {
       type: "line",
       data: {
         labels: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
-        datasets: [{
-          label: "Órdenes",
-          data: [12, 19, 3, 5, 2, 3, 7],
-          fill: true,
-          backgroundColor: "rgba(255, 193, 7, 0.2)",
-          borderColor: "#ffc107",
-          tension: 0.3,
-        }],
+        datasets: [
+          {
+            label: "Órdenes",
+            data: [12, 19, 3, 5, 2, 3, 7],
+            fill: true,
+            backgroundColor: "rgba(255, 193, 7, 0.2)",
+            borderColor: "#ffc107",
+            tension: 0.3,
+          },
+        ],
       },
-      options: { responsive: true, plugins: { legend: { display: false } } },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+      },
     });
   }
 
-  const ctxBar = document.getElementById("myBarChart");
+  // Crear gráfico de barras
   if (ctxBar) {
-    new Chart(ctxBar, {
+    // Si ya existe, destruir antes de crear
+    if (Chart.getChart(ctxBar)) {
+      Chart.getChart(ctxBar).destroy();
+    }
+
+    chartBarInstance = new Chart(ctxBar, {
       type: "bar",
       data: {
         labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
-        datasets: [{
-          label: "Servicios",
-          data: [10, 20, 15, 25, 30, 22],
-          backgroundColor: "#212529",
-        }],
+        datasets: [
+          {
+            label: "Servicios",
+            data: [10, 20, 15, 25, 30, 22],
+            backgroundColor: "#212529",
+          },
+        ],
       },
-      options: { responsive: true, plugins: { legend: { display: false } } },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+      },
     });
   }
+
+  // 🔹 Destruir las instancias cuando el componente se desmonte
+  return () => {
+    if (chartAreaInstance) chartAreaInstance.destroy();
+    if (chartBarInstance) chartBarInstance.destroy();
+  };
 }, []);
+
 
 
   return (
