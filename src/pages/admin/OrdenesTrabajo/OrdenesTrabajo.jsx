@@ -16,12 +16,12 @@ const OrdenesTrabajo = () => {
   }, []);
 
   return (
-    <div className="sb-nav-fixed">
+      <div className="sb-nav-fixed">
       {/* NAVBAR SUPERIOR */}
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <Link className="navbar-brand ps-3" to="/admin">
+        <a className="navbar-brand ps-3" href="#">
           DREAM CARS
-        </Link>
+        </a>
         <button
           className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
           id="sidebarToggle"
@@ -29,13 +29,28 @@ const OrdenesTrabajo = () => {
           <i className="fas fa-bars"></i>
         </button>
 
+        {/* BUSCADOR */}
+        <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+          <div className="input-group">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+
         {/* USUARIO */}
         <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
               id="navbarDropdown"
-              href="#!"
+              href="#"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -47,12 +62,12 @@ const OrdenesTrabajo = () => {
               aria-labelledby="navbarDropdown"
             >
               <li>
-                <a className="dropdown-item" href="#!">
+                <a className="dropdown-item" href="#">
                   Configuraciones
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#!">
+                <a className="dropdown-item" href="#">
                   Registro de Actividad
                 </a>
               </li>
@@ -60,7 +75,7 @@ const OrdenesTrabajo = () => {
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#!">
+                <a className="dropdown-item" href="/login">
                   Cerrar Sesión
                 </a>
               </li>
@@ -140,7 +155,7 @@ const OrdenesTrabajo = () => {
                     <Link className="nav-link" to="/admin/ordenes-trabajo">
                       Administrar Órdenes
                     </Link>
-                    <Link className="nav-link" to="/admin/nueva-orden">
+                    <Link className="nav-link" to="/admin/orden-nueva">
                       Nueva Orden
                     </Link>
                   </nav>
