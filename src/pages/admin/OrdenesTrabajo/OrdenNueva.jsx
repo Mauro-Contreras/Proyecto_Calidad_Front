@@ -109,7 +109,7 @@ function OrdenNueva() {
           <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <Link className="nav-link" to="/admin">
+                <Link className="nav-link" to="/admin/index">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
