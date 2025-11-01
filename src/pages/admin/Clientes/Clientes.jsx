@@ -53,7 +53,7 @@ export default function Clientes() {
     <div className="sb-nav-fixed">
       {/* NAVBAR SUPERIOR */}
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand ps-3" href="/admin/index">DREAM CARS</a>
+        <a className="navbar-brand ps-3" href="/admin">DREAM CARS</a>
         <button className="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle">
           <i className="fas fa-bars"></i>
         </button>
@@ -78,7 +78,7 @@ export default function Clientes() {
           <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <a className="nav-link" href="/admin/index">
+                <a className="nav-link" href="/admin">
                   <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                   Dashboard
                 </a>
