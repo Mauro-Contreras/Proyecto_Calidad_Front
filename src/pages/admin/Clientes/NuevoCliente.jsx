@@ -7,10 +7,10 @@ import "../panel.css";
 
 const NuevoCliente = () => {
   return (
-    <div className="sb-nav-fixed">
+      <div className="sb-nav-fixed">
       {/* NAVBAR SUPERIOR */}
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand ps-3" href="/admin">
+        <a className="navbar-brand ps-3" href="#">
           DREAM CARS
         </a>
         <button
@@ -20,12 +20,28 @@ const NuevoCliente = () => {
           <i className="fas fa-bars"></i>
         </button>
 
+        {/* BUSCADOR */}
+        <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+          <div className="input-group">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        {/* USUARIO */}
         <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
               id="navbarDropdown"
-              href="#!"
+              href="#"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -37,12 +53,12 @@ const NuevoCliente = () => {
               aria-labelledby="navbarDropdown"
             >
               <li>
-                <a className="dropdown-item" href="/admin/configuracion">
+                <a className="dropdown-item" href="#">
                   Configuraciones
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#!">
+                <a className="dropdown-item" href="#">
                   Registro de Actividad
                 </a>
               </li>
@@ -69,7 +85,7 @@ const NuevoCliente = () => {
           >
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <a className="nav-link" href="/admin">
+                <a className="nav-link" href="/admin/index">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tachometer-alt"></i>
                   </div>
