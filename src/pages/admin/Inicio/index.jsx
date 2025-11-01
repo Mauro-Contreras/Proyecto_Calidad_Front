@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Chart from "chart.js/auto";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../style.css";
 import "../panel.css";
 
