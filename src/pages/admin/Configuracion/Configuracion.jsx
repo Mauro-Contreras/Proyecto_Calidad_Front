@@ -79,7 +79,7 @@ const Configuracion = () => {
           <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div className="sb-sidenav-menu">
               <div className="nav">
-                <a className="nav-link" href="/index">
+                <a className="nav-link" href="/admin">
                   <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                   Dashboard
                 </a>
@@ -92,8 +92,8 @@ const Configuracion = () => {
                 </a>
                 <div className="collapse" id="collapseServicios" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/servicios">Lista de Servicios</a>
-                    <a className="nav-link" href="/nuevo-servicio">Agregar Servicio</a>
+                    <a className="nav-link" href="/admin/servicios">Lista de Servicios</a>
+                    <a className="nav-link" href="/admin/nuevo-servicio">Agregar Servicio</a>
                   </nav>
                 </div>
 
@@ -105,8 +105,8 @@ const Configuracion = () => {
                 </a>
                 <div className="collapse" id="collapseOrdenes" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/ordenes-trabajo">Administrar Ordenes</a>
-                    <a className="nav-link" href="/orden-nueva">Nueva Orden</a>
+                    <a className="nav-link" href="/admin/ordenes-trabajo">Administrar Ordenes</a>
+                    <a className="nav-link" href="/admin/orden-nueva">Nueva Orden</a>
                   </nav>
                 </div>
 
@@ -118,10 +118,10 @@ const Configuracion = () => {
                 </a>
                 <div className="collapse" id="collapseClientes" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/clientes">Lista de Clientes</a>
-                    <a className="nav-link" href="/nuevo-cliente">Agregar Cliente</a>
-                    <a className="nav-link" href="/vehiculos">Vehículos</a>
-                    <a className="nav-link" href="/nuevo-vehiculo">Agregar Vehículo</a>
+                    <a className="nav-link" href="/admin/clientes">Lista de Clientes</a>
+                    <a className="nav-link" href="/admin/nuevo-cliente">Agregar Cliente</a>
+                    <a className="nav-link" href="/admin/vehiculos">Vehículos</a>
+                    <a className="nav-link" href="/admin/nuevo-vehiculo">Agregar Vehículo</a>
                   </nav>
                 </div>
 
@@ -133,12 +133,12 @@ const Configuracion = () => {
                 </a>
                 <div className="collapse" id="collapseEmpleados" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/empleados">Lista de Empleados</a>
-                    <a className="nav-link" href="/nuevo-empleado">Agregar Empleado</a>
+                    <a className="nav-link" href="/admin/empleados">Lista de Empleados</a>
+                    <a className="nav-link" href="/admin/nuevo-empleado">Agregar Empleado</a>
                   </nav>
                 </div>
 
-                <a className="nav-link" href="/reportes">
+                <a className="nav-link" href="/admin/reportes">
                   <div className="sb-nav-link-icon"><i className="fas fa-chart-line"></i></div>
                   Reportes
                 </a>

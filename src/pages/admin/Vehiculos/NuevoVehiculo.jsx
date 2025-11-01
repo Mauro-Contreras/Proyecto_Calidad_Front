@@ -112,9 +112,9 @@ const NuevoVehiculo = () => {
         </ul>
       </nav>
 
-      {/* Layout principal */}
+            {/* LAYOUT PRINCIPAL */}
       <div id="layoutSidenav">
-        {/* Menú lateral */}
+        {/* BARRA LATERAL */}
         <div id="layoutSidenav_nav">
           <nav
             className="sb-sidenav accordion sb-sidenav-dark"
@@ -129,11 +129,14 @@ const NuevoVehiculo = () => {
                   Dashboard
                 </a>
 
+                {/* SERVICIOS */}
                 <a
                   className="nav-link collapsed"
                   href="#"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseServicios"
+                  aria-expanded="false"
+                  aria-controls="collapseServicios"
                 >
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-tools"></i>
@@ -144,25 +147,28 @@ const NuevoVehiculo = () => {
                   </div>
                 </a>
                 <div
-                  className="collapse"
+                  className="collapse show"
                   id="collapseServicios"
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/Servicios/Servicios">
+                    <a className="nav-link active" href="/admin/servicios">
                       Lista de Servicios
                     </a>
-                    <a className="nav-link" href="/admin/Servicios/NuevoServicio">
+                    <a className="nav-link" href="/admin/nuevo-servicio">
                       Agregar Servicio
                     </a>
                   </nav>
                 </div>
 
+                {/* ORDENES */}
                 <a
                   className="nav-link collapsed"
                   href="#"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOrdenes"
+                  aria-expanded="false"
+                  aria-controls="collapseOrdenes"
                 >
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-file-invoice"></i>
@@ -178,20 +184,23 @@ const NuevoVehiculo = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/Ordenes/OrdenesTrabajo">
-                      Administrar Ordenes
+                    <a className="nav-link" href="/admin/ordenes-trabajo">
+                      Administrar Órdenes
                     </a>
-                    <a className="nav-link" href="/admin/Ordenes/NuevaOrden">
+                    <a className="nav-link" href="/admin/orden-nueva">
                       Nueva Orden
                     </a>
                   </nav>
                 </div>
 
+                {/* CLIENTES */}
                 <a
                   className="nav-link collapsed"
                   href="#"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseClientes"
+                  aria-expanded="false"
+                  aria-controls="collapseClientes"
                 >
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-users"></i>
@@ -207,26 +216,29 @@ const NuevoVehiculo = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/Clientes/Clientes">
+                    <a className="nav-link" href="/admin/clientes">
                       Lista de Clientes
                     </a>
-                    <a className="nav-link" href="/admin/Clientes/NuevoCliente">
+                    <a className="nav-link" href="/admin/nuevo-cliente">
                       Agregar Cliente
                     </a>
-                    <a className="nav-link" href="/admin/Vehiculos/Vehiculos">
+                    <a className="nav-link" href="/admin/vehiculos">
                       Vehículos
                     </a>
-                    <a className="nav-link" href="/admin/Vehiculos/NuevoVehiculo">
+                    <a className="nav-link" href="/admin/nuevo-vehiculo">
                       Agregar Vehículo
                     </a>
                   </nav>
                 </div>
 
+                {/* EMPLEADOS */}
                 <a
                   className="nav-link collapsed"
                   href="#"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseEmpleados"
+                  aria-expanded="false"
+                  aria-controls="collapseEmpleados"
                 >
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-user-cog"></i>
@@ -242,23 +254,25 @@ const NuevoVehiculo = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/Empleados/Empleados">
+                    <a className="nav-link" href="/admin/empleados">
                       Lista de Empleados
                     </a>
-                    <a className="nav-link" href="/admin/Empleados/NuevoEmpleado">
+                    <a className="nav-link" href="/admin/nuevo-empleado">
                       Agregar Empleado
                     </a>
                   </nav>
                 </div>
 
-                <a className="nav-link" href="/admin/Reportes/Reportes">
+                {/* REPORTES */}
+                <a className="nav-link" href="/admin/reportes">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-chart-line"></i>
                   </div>
                   Reportes
                 </a>
 
-                <a className="nav-link" href="/admin/Configuracion/Configuracion">
+                {/* CONFIGURACIÓN */}
+                <a className="nav-link" href="/admin/configuracion">
                   <div className="sb-nav-link-icon">
                     <i className="fas fa-cog"></i>
                   </div>
@@ -269,6 +283,7 @@ const NuevoVehiculo = () => {
           </nav>
         </div>
 
+        
         {/* Contenido Principal */}
         <div id="layoutSidenav_content">
           <main>
