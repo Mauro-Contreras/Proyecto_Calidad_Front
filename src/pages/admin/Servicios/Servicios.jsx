@@ -4,10 +4,10 @@ import "../panel.css";
 
 const Servicios = () => {
   return (
-    <div className="sb-nav-fixed">
+      <div className="sb-nav-fixed">
       {/* NAVBAR SUPERIOR */}
       <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand ps-3" href="/admin">
+        <a className="navbar-brand ps-3" href="#">
           DREAM CARS
         </a>
         <button
@@ -17,6 +17,22 @@ const Servicios = () => {
           <i className="fas fa-bars"></i>
         </button>
 
+        {/* BUSCADOR */}
+        <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+          <div className="input-group">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+            <button className="btn btn-primary" type="button">
+              <i className="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        {/* USUARIO */}
         <ul className="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
           <li className="nav-item dropdown">
             <a
@@ -47,7 +63,7 @@ const Servicios = () => {
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href="/login">
                   Cerrar Sesión
                 </a>
               </li>
@@ -128,10 +144,10 @@ const Servicios = () => {
                   data-bs-parent="#sidenavAccordion"
                 >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/ordenes">
+                    <a className="nav-link" href="/admin/ordenes-trabajo">
                       Administrar Órdenes
                     </a>
-                    <a className="nav-link" href="/admin/nueva-orden">
+                    <a className="nav-link" href="/admin/orden-nueva">
                       Nueva Orden
                     </a>
                   </nav>
