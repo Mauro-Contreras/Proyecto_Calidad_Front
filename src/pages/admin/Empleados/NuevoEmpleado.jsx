@@ -239,13 +239,13 @@ const NuevoEmpleado = () => {
         {/* CONTENIDO PRINCIPAL */}
         <div id="layoutSidenav_content">
           <main>
-            <div className="container mt-4">
-              <h1>Agregar Nuevo Empleado</h1>
-              <p className="text-muted">
+            <div className="container-fluid mt-4">
+              <h1 className="mt-4">Agregar Nuevo Empleado</h1>
+              <p className="mb-4 text-muted">
                 Registra la información de un nuevo miembro del equipo.
               </p>
 
-              <div className="form-container">
+              <div className="card mb-4">
                 <form>
                   <div className="row mb-3">
                     <div className="col-md-6">
@@ -312,7 +312,7 @@ const NuevoEmpleado = () => {
                     <button type="submit" className="btn btn-success me-2">
                       <i className="fas fa-save"></i> Guardar
                     </button>
-                    <a href="/empleados" className="btn btn-secondary">
+                    <a href="/admin/empleados" className="btn btn-secondary">
                       <i className="fas fa-arrow-left"></i> Volver
                     </a>
                   </div>
