@@ -369,7 +369,7 @@ const NuevoVehiculo = () => {
                         <i className="fas fa-save me-1"></i> Registrar Vehículo
                       </button>
                       <a
-                        href="/admin/Clientes/Clientes"
+                        href="/admin/vehiculos"
                         className="btn btn-secondary"
                       >
                         <i className="fas fa-arrow-left me-1"></i> Volver
