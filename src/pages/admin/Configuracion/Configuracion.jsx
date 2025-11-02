@@ -139,6 +139,20 @@ const Configuracion = () => {
                   </nav>
                 </div>
 
+                <Link className="nav-link" to="/admin/facturacion">
+                  <div className="sb-nav-link-icon">
+                  <i className="fa-solid fa-file-invoice-dollar"></i>
+                  </div>
+                  Facturación
+                </Link>
+                
+                <Link className="nav-link" to="/admin/inventario">
+                  <div className="sb-nav-link-icon">
+                  <i className="fa-solid fa-boxes-stacked"></i>
+                  </div>
+                  Inventario
+                </Link>
+
                 <a className="nav-link" href="/admin/reportes">
                   <div className="sb-nav-link-icon"><i className="fas fa-chart-line"></i></div>
                   Reportes
