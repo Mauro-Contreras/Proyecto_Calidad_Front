@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Chart, registerables } from "chart.js";
 import "../style.css";
 import "../panel.css";
