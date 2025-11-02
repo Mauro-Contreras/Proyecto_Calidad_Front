@@ -254,7 +254,7 @@ const Vehiculos = () => {
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h1 className="mt-4">Lista de Vehículos</h1>
               <a
-                href="/admin/Vehiculos/NuevoVehiculo"
+                href="/admin/nuevo-vehiculo"
                 className="btn btn-primary"
               >
                 <i className="fas fa-plus"></i> Agregar Nuevo Vehículo
