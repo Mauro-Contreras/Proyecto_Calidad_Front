@@ -162,13 +162,13 @@ function App() {
           path="/pages/login" element={<Login />} />
 
         <Route 
-          path="/admin/facturacion" element={<Facturacion />} />
+          path="/admin/facturacion" element={<Facturacion />} 
+        />
 
         <Route 
-          path="/admin/inventario" element={<Inventario />} />
-
-
-
+          path="/admin/inventario" element={<Inventario />} 
+        />
+        
         {/* --- Panel CLIENTE --- */}
         <Route
           path="/cliente"
