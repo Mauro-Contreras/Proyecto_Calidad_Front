@@ -40,6 +40,11 @@ const Sidebar = () => {
               Empleados
             </Link>
 
+            <a className="nav-link" href="/admin/facturacion">
+            <div className="sb-nav-link-icon"><i className="fas fa-file-invoice-dollar"></i></div>
+            Facturación
+            </a>
+
             <Link className="nav-link" to="/reportes">
               <div className="sb-nav-link-icon"><i className="fas fa-chart-line"></i></div>
               Reportes
