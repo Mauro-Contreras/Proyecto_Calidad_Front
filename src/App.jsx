@@ -23,6 +23,8 @@ import Servicios from "./pages/admin/Servicios/Servicios";
 import NuevoServicio from "./pages/admin/Servicios/NuevoServicio";
 import Vehiculos from "./pages/admin/Vehiculos/Vehiculos";
 import NuevoVehiculo from "./pages/admin/Vehiculos/NuevoVehiculo";
+import Facturacion from "./admin/Facturacion/Facturacion";
+
 
 // Importar estilos generales del panel
 import "./pages/admin/style.css";
@@ -158,6 +160,10 @@ function App() {
         />
         <Route 
           path="/pages/login" element={<Login />} />
+
+        <Route 
+          path="/admin/facturacion" element={<Facturacion />} />
+
 
         {/* --- Panel CLIENTE --- */}
         <Route
