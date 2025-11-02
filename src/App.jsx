@@ -156,6 +156,8 @@ function App() {
           path="/admin/nuevo-vehiculo"
           element={<AdminRoute userRole={userRole} element={<NuevoVehiculo />} />}
         />
+        <Route 
+          path="/pages/login" element={<Login />} />
 
         {/* --- Panel CLIENTE --- */}
         <Route
