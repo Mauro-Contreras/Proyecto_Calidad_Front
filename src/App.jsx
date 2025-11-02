@@ -164,6 +164,10 @@ function App() {
         <Route 
           path="/admin/facturacion" element={<Facturacion />} />
 
+        <Route 
+          path="/admin/inventario" element={<Inventario />} />
+
+
 
         {/* --- Panel CLIENTE --- */}
         <Route
