@@ -23,7 +23,9 @@ import Servicios from "./pages/admin/Servicios/Servicios";
 import NuevoServicio from "./pages/admin/Servicios/NuevoServicio";
 import Vehiculos from "./pages/admin/Vehiculos/Vehiculos";
 import NuevoVehiculo from "./pages/admin/Vehiculos/NuevoVehiculo";
-import Facturacion from "./admin/Facturacion/Facturacion";
+import Facturacion from "./pages/admin/Facturacion/facturacion";
+import Inventario from "./pages/admin/Inventario/Inventario";
+
 
 
 // Importar estilos generales del panel
@@ -166,7 +168,7 @@ function App() {
         />
 
         <Route 
-          path="/admin/inventario" element={<Inventario />} 
+          path="/admin/inventario"element={<Inventario />} 
         />
         
         {/* --- Panel CLIENTE --- */}
