@@ -118,50 +118,170 @@ export default function Clientes() {
         </ul>
       </nav>
 
-      {/* SIDENAV */}
+      {/* LAYOUT PRINCIPAL */}
       <div id="layoutSidenav">
+        {/* BARRA LATERAL */}
         <div id="layoutSidenav_nav">
-          <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <nav
+            className="sb-sidenav accordion sb-sidenav-dark"
+            id="sidenavAccordion"
+          >
             <div className="sb-sidenav-menu">
               <div className="nav">
                 <a className="nav-link" href="/admin">
-                  <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-tachometer-alt"></i>
+                  </div>
                   Dashboard
                 </a>
 
-                <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseServicios" aria-expanded="false">
-                  <div className="sb-nav-link-icon"><i className="fas fa-tools"></i></div>
+                {/* SERVICIOS */}
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseServicios"
+                  aria-expanded="false"
+                  aria-controls="collapseServicios"
+                >
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-tools"></i>
+                  </div>
                   Servicios
-                  <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                  <div className="sb-sidenav-collapse-arrow">
+                    <i className="fas fa-angle-down"></i>
+                  </div>
                 </a>
-                <div className="collapse" id="collapseServicios" data-bs-parent="#sidenavAccordion">
+                <div
+                  className="collapse show"
+                  id="collapseServicios"
+                  data-bs-parent="#sidenavAccordion"
+                >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="/admin/servicios">Lista de Servicios</a>
-                    <a className="nav-link" href="/admin/nuevo-servicio">Agregar Servicio</a>
+                    <a className="nav-link active" href="/admin/servicios">
+                      Lista de Servicios
+                    </a>
+                    <a className="nav-link" href="/admin/nuevo-servicio">
+                      Agregar Servicio
+                    </a>
                   </nav>
                 </div>
 
-                <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="true">
-                  <div className="sb-nav-link-icon"><i className="fas fa-users"></i></div>
+                {/* ORDENES */}
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOrdenes"
+                  aria-expanded="false"
+                  aria-controls="collapseOrdenes"
+                >
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-file-invoice"></i>
+                  </div>
+                  Órdenes de Trabajo
+                  <div className="sb-sidenav-collapse-arrow">
+                    <i className="fas fa-angle-down"></i>
+                  </div>
+                </a>
+                <div
+                  className="collapse"
+                  id="collapseOrdenes"
+                  data-bs-parent="#sidenavAccordion"
+                >
+                  <nav className="sb-sidenav-menu-nested nav">
+                    <a className="nav-link" href="/admin/ordenes-trabajo">
+                      Administrar Órdenes
+                    </a>
+                    <a className="nav-link" href="/admin/orden-nueva">
+                      Nueva Orden
+                    </a>
+                  </nav>
+                </div>
+
+                {/* CLIENTES */}
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseClientes"
+                  aria-expanded="false"
+                  aria-controls="collapseClientes"
+                >
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-users"></i>
+                  </div>
                   Clientes
-                  <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                  <div className="sb-sidenav-collapse-arrow">
+                    <i className="fas fa-angle-down"></i>
+                  </div>
                 </a>
-                <div className="collapse show" id="collapseClientes" data-bs-parent="#sidenavAccordion">
+                <div
+                  className="collapse"
+                  id="collapseClientes"
+                  data-bs-parent="#sidenavAccordion"
+                >
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link active" href="/admin/clientes">Lista de Clientes</a>
-                    <a className="nav-link" href="/admin/nuevo-cliente">Agregar Cliente</a>
-                    <a className="nav-link" href="/admin/vehiculos">Vehículos</a>
-                    <a className="nav-link" href="/admin/nuevo-vehiculo">Agregar Vehículo</a>
+                    <a className="nav-link" href="/admin/clientes">
+                      Lista de Clientes
+                    </a>
+                    <a className="nav-link" href="/admin/nuevo-cliente">
+                      Agregar Cliente
+                    </a>
+                    <a className="nav-link" href="/admin/vehiculos">
+                      Vehículos
+                    </a>
+                    <a className="nav-link" href="/admin/nuevo-vehiculo">
+                      Agregar Vehículo
+                    </a>
                   </nav>
                 </div>
 
+                {/* EMPLEADOS */}
+                <a
+                  className="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEmpleados"
+                  aria-expanded="false"
+                  aria-controls="collapseEmpleados"
+                >
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-user-cog"></i>
+                  </div>
+                  Empleados
+                  <div className="sb-sidenav-collapse-arrow">
+                    <i className="fas fa-angle-down"></i>
+                  </div>
+                </a>
+                <div
+                  className="collapse"
+                  id="collapseEmpleados"
+                  data-bs-parent="#sidenavAccordion"
+                >
+                  <nav className="sb-sidenav-menu-nested nav">
+                    <a className="nav-link" href="/admin/empleados">
+                      Lista de Empleados
+                    </a>
+                    <a className="nav-link" href="/admin/nuevo-empleado">
+                      Agregar Empleado
+                    </a>
+                  </nav>
+                </div>
+
+                {/* REPORTES */}
                 <a className="nav-link" href="/admin/reportes">
-                  <div className="sb-nav-link-icon"><i className="fas fa-chart-line"></i></div>
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-chart-line"></i>
+                  </div>
                   Reportes
                 </a>
 
+                {/* CONFIGURACIÓN */}
                 <a className="nav-link" href="/admin/configuracion">
-                  <div className="sb-nav-link-icon"><i className="fas fa-cog"></i></div>
+                  <div className="sb-nav-link-icon">
+                    <i className="fas fa-cog"></i>
+                  </div>
                   Configuración
                 </a>
               </div>
